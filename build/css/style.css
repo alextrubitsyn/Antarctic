@@ -96,21 +96,21 @@ input[type="file"].visually-hidden {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-image: url("../../img/antarctic_desktop.png");
+  background-image: url("../img/antarctic_desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  background-image: url("../../img/antarctic_desktop@2x.png");
+  background-image: url("../img/antarctic_desktop@2x.png");
 }
 @media (max-width: 1023px) {
   .page {
-    background-image: url("../../img/antarctic_tablet.png");
+    background-image: url("../img/antarctic_tablet.png");
   }
 }
 @media (max-width: 767px) {
   .page {
-    background-image: url("../../img/antarctic_mobile.png");
+    background-image: url("../img/antarctic_mobile.png");
   }
 }
 .page-header {
@@ -201,6 +201,7 @@ input[type="file"].visually-hidden {
   }
   .page-header--nojs .page-header__nav {
     display: block;
+    position: static;
     width: 100%;
     color: #011C40;
     background-color: #F9FBFD;
@@ -211,12 +212,6 @@ input[type="file"].visually-hidden {
     top: 0;
     left: 0;
     right: 0;
-    color: #011C40;
-    background-color: #F9FBFD;
-  }
-  .page-header--nojs .page-header__nav {
-    display: block;
-    position: static;
     color: #011C40;
     background-color: #F9FBFD;
   }
@@ -246,7 +241,7 @@ input[type="file"].visually-hidden {
     width: 24px;
     height: 12px;
     z-index: 10;
-    background-image: url("../../img/menu.svg");
+    background-image: url("../img/menu.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 24px 12px;
@@ -263,7 +258,7 @@ input[type="file"].visually-hidden {
     display: block;
     width: 13px;
     height: 13px;
-    background-image: url("../../img/close.svg");
+    background-image: url("../img/close.svg");
     background-size: 13px 13px;
   }
 }

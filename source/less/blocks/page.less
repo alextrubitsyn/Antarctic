@@ -5,32 +5,35 @@
   margin: 0 auto;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("../../img/antarctic_desktop.png");
+  background-image: url("../img/antarctic_desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  background-image: url("../../img/antarctic_desktop@2x.png");
+@media (min-resolution: @retina-dpi),
+  (min-resolution: @retina-dppx) {
+  background-image: url("../img/antarctic_desktop@2x.png");
 }
 
 
 @media (max-width: @tablet-width) {
   .page {
-    background-image: url("../../img/antarctic_tablet.png");
+    background-image: url("../img/antarctic_tablet.png");
   }
 
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  background-image: url("../../img/antarctic_tablet@2x.png");
-}
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("../img/antarctic_tablet@2x.png");
+  }
 }
 
 @media (max-width: @mobile-width) {
   .page {
-    background-image: url("../../img/antarctic_mobile.png");
+    background-image: url("../img/antarctic_mobile.png");
   }
 
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  background-image: url("../../img/antarctic_mobile@2x.png");
-}
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("../img/antarctic_mobile@2x.png");
+  }
 }
