@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Арктика</title>
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet" /> -->
+    <!-- <link href="css/normalize.css" rel="stylesheet" /> -->
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Арктика</title>
-  <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link href="css/style.css" rel="stylesheet" /> -->
-  <!-- <link href="css/normalize.css" rel="stylesheet" /> -->
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-
-</head>
-
-<body>
-  <!-- <div style="display: none;">
+  <body>
+    <!-- <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div> -->
-  <div class="page">
-    <header class="page-header page-header--nojs">
-    <!-- <header class="page-header page-header--menu-open"> -->
-      <div class="page-header__logo logo">
-        <a class="logo__link">
-          <svg class="logo__image" width="70" height="38" viewBox="0 0 70 38" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" fill="currentColor"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" fill="currentColor"></path>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" fill="currentColor"></path>
-          </svg>
-        </a>
-      </div>
-      <button class="page-header__toggle"></button>
-      <div class="page-header__nav">
-        <ul class="page-header__nav-list">
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="#advantages">Преимущества</a>
+    <div class="page">
+      <header class="page-header page-header--nojs">
+        <div class="page-header__logo logo">
+          <a class="logo__link">
+            <svg class="logo__image" width="70" height="38" viewBox="0 0 70 38" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.903517 31.125L14.6726 12.5429L18.4395 14.556L27.4026 0L32.9879 6.65881L35.0665 4.95532L43.1199 15.1755L48.8355 8.36191L64.8126 31.125L49.42 11.7689L47.0817 19.8984L49.225 26.3249L35.456 7.35558L35.3069 13.8279L43.1199 31.125L28.5064 4.33574L32.7282 18.8145L26.8181 4.72292L23.5706 14.0916L24.2198 7.97472L16.1013 30.0411L17.0753 20.75L13.6981 17.0338L0.903517 31.125Z" fill="currentColor"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M69.4414 34.0314C47.641 16.428 13.7091 40.6289 0 31.2961C15.0723 44.5215 50.3019 22.1644 69.4414 34.0314Z" fill="currentColor"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M70 35.4157C52.8956 24.5171 27.4568 39.6838 14.4189 36.1717C28.5467 43.0283 54.8482 27.8361 70 35.4157Z" fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+        <button class="page-header__toggle"></button>
+        <ul class="page-header__nav-list main-nav">
+          <li class="page-header__nav-item main-nav__item">
+            <a class="page-header__nav-link main-nav__link" href="#advantages">Преимущества</a>
           </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="#directions">Направления</a>
+          <li class="page-header__nav-item main-nav__item">
+            <a class="page-header__nav-link main-nav__link" href="#directions">Направления</a>
           </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="#cruises">Ближайшие круизы</a>
+          <li class="page-header__nav-item main-nav__item">
+            <a class="page-header__nav-link main-nav__link" href="#cruises">
+              Ближайшие круизы
+            </a>
           </li>
-          <li class="page-header__nav-item">
-            <a class="page-header__nav-link" href="#contacts">Контакты</a>
+          <li class="page-header__nav-item main-nav__item">
+            <a class="page-header__nav-link main-nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-      </div>
-    </header>
+      </header>
 
-    <main class="page-main">
-      <section class="">
+      <main class="page-main">
+        <section class=""></section>
+      </main>
 
-      </section>
-    </main>
-
-    <footer class="page-footer">
-
-    </footer>
-  </div>
-  <script src="js/script.js"></script>
-</body>
-
+      <footer class="page-footer"></footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
