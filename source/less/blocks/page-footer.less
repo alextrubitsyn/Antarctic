@@ -4,7 +4,7 @@
   align-items: center;
   flex-shrink: 0;
   .clear();
-  padding: 50px 103px;
+  padding: 50px 7.54%;
   background-color: @text;
 }
 
@@ -13,13 +13,10 @@
   color: @menu;
 }
 
-.page-footer__nav-list {
-  margin-right: 40px;
-}
-
 .page-footer__social {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -45,5 +42,9 @@
     .clear();
     margin-bottom: 30px;
     color: @menu;
+  }
+
+  .page-footer__social {
+    justify-content: flex-start;
   }
 }

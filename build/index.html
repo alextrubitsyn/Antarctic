@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Антарктика</title>
     <link href="css/style.min.css" rel="stylesheet">
-    <!-- <link href="css/style.css" rel="stylesheet" /> -->
-    <!-- <link href="css/normalize.css" rel="stylesheet" /> -->
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <!-- <script>
+      document.createElement( "picture" );
+    </script> -->
   </head>
 
   <body>
@@ -65,7 +66,46 @@
       </header>
 
       <main class="page-main">
-        <section class=""></section>
+        <section class="page-label">
+          <picture>
+            <!-- 1х: 1366px; 2x: 2732px -->
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/antarctic_desktop.webp 1x, img/antarctic_desktop@2x.webp 2x">
+              <!-- 1х: 768px; 2x: 1536px -->
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/antarctic_tablet.webp 1x, img/antarctic_tablet@2x.webp 2x">
+                <!-- 1х: 320px; 2x: 640px -->
+            <source type="image/webp" srcset="img/antarctic_mobile.webp 1x, img/antarctic_mobile@2x.webp 2x">
+            <source media="(min-width: 1024px)" srcset="img/antarctic_desktop.png 1x,img/antarctic_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/antarctic_tablet.png 1x,img/antarctic_tablet@2x.png 2x">
+            <img class="page-label__image" src="img/antarctic_mobile.png" srcset="img/antarctic_mobile@2x.png 2x" width="320" height="500" alt="Антарктика">
+          </picture>
+          <h1 class="page-label__title">Круизы в&nbsp;Антарктику</h1>
+          <p class="page-label__slogan">Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+        </section>
+        <section class="voyage">
+          <div class="voyage__wrapper">
+            <h2 class="voyage__title">
+              Путешествие на&nbsp;край земли
+            </h2>
+            <p class="voyage__description">
+              Это волшебное путешествие поможет вам познакомиться
+              поближе с&nbsp;удивительным миром Антарктики. Наш круизный
+              лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть:
+              ледяные айсберги, несколько видов пингвинов, китов,
+              морских котиков и многое другое.
+            </p>
+        </div>
+        <picture>
+          <!-- 1х: 1366px; 2x: 2732px -->
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/penguins_desktop.webp 1x, img/penguins_desktop@2x.webp 2x">
+            <!-- 1х: 768px; 2x: 1536px -->
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/penguins__tablet.webp 1x, img/penguins_tablet@2x.webp 2x">
+              <!-- 1х: 320px; 2x: 640px -->
+          <source type="image/webp" srcset="img/penguins_mobile.webp 1x, img/penguins_mobile@2x.webp 2x">
+          <source media="(min-width: 1024px)" srcset="img/penguins_desktop.png 1x,img/penguins_desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/penguins_tablet.png 1x,img/penguins_tablet@2x.png 2x">
+          <img class="voyage__image" src="img/penguins_mobile.png" srcset="img/penguins_mobile@2x.png 2x" width="290" height="186" alt="Пингвины">
+        </picture>
+      </section>
       </main>
 
       <footer class="page-footer">

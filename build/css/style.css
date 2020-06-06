@@ -85,6 +85,7 @@ input[type="file"].visually-hidden {
   font-family: inherit;
 }
 .page {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,24 +97,6 @@ input[type="file"].visually-hidden {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-image: url("../img/antarctic_desktop.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  background-image: url("../img/antarctic_desktop@2x.png");
-}
-@media (max-width: 1023px) {
-  .page {
-    background-image: url("../img/antarctic_tablet.png");
-  }
-}
-@media (max-width: 767px) {
-  .page {
-    background-image: url("../img/antarctic_mobile.png");
-    background-size: cover;
-    background-position: center;
-  }
 }
 .page-header {
   display: -webkit-box;
@@ -126,7 +109,8 @@ input[type="file"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 35px 103px 0;
+  margin-bottom: 194px;
+  padding: 35px 7.54% 0;
 }
 .page-header__logo {
   margin-right: auto;
@@ -140,13 +124,15 @@ input[type="file"].visually-hidden {
 }
 @media (max-width: 1023px) {
   .page-header {
+    margin-bottom: 214px;
     padding: 30px 45px 0;
   }
 }
 @media (max-width: 767px) {
   .page-header {
+    margin-bottom: 130px;
     position: relative;
-    padding: 25px 15px 0;
+    padding: 20px 15px 0;
   }
   .page-header--nojs {
     padding: 0;
@@ -257,6 +243,7 @@ input[type="file"].visually-hidden {
   .main-nav__link {
     font-size: 14px;
     line-height: 17px;
+    letter-spacing: 0.08px;
   }
 }
 @media (max-width: 767px) {
@@ -269,6 +256,7 @@ input[type="file"].visually-hidden {
     padding: 93px 15px 65px;
     color: #011C40;
     background-color: #F9FBFD;
+    max-width: 100%;
   }
   .main-nav--footer {
     display: -webkit-box;
@@ -302,6 +290,162 @@ input[type="file"].visually-hidden {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.page-label {
+  color: #F9FBFD;
+  padding-left: 14.5%;
+}
+.page-label__image {
+  z-index: -1;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 650px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2F80ED;
+}
+.page-label__title {
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 66px;
+}
+.page-label__slogan {
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 283px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+@media (max-width: 1023px) {
+  .page-label {
+    padding-left: 5.86%;
+  }
+  .page-label__image {
+    height: 638px;
+  }
+  .page-label__title {
+    margin-bottom: 12px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+  .page-label__slogan {
+    margin-bottom: 280px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .page-label {
+    padding-left: 4.69%;
+  }
+  .page-label__image {
+    height: 500px;
+  }
+  .page-label__title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    line-height: 45px;
+  }
+  .page-label__slogan {
+    margin-bottom: 185px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.voyage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 120px 7.54%;
+  color: #011C40;
+  background-color: #F9FBFD;
+}
+.voyage__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+}
+.voyage__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+.voyage__description {
+  width: 88%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.voyage__image {
+  max-width: none;
+  width: 560px;
+  height: 301px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 1023px) {
+  .voyage {
+    padding: 100px 5.86%;
+  }
+  .voyage__title {
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .voyage__description {
+    width: 91%;
+  }
+  .voyage__image {
+    width: 324px;
+    height: 264px;
+  }
+}
+@media (max-width: 767px) {
+  .voyage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 65px 15px;
+  }
+  .voyage__wrapper {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .voyage__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .voyage__description {
+    width: 100%;
+  }
+  .voyage__image {
+    width: 290px;
+    height: 186px;
+  }
+}
 .page-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,15 +461,12 @@ input[type="file"].visually-hidden {
       flex-shrink: 0;
   margin: 0;
   padding: 0;
-  padding: 50px 103px;
+  padding: 50px 7.54%;
   background-color: #011C40;
 }
 .page-footer__logo {
   margin-right: 40px;
   color: #F9FBFD;
-}
-.page-footer__nav-list {
-  margin-right: 40px;
 }
 .page-footer__social {
   display: -webkit-box;
@@ -335,6 +476,9 @@ input[type="file"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -366,13 +510,18 @@ input[type="file"].visually-hidden {
     margin-bottom: 30px;
     color: #F9FBFD;
   }
+  .page-footer__social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .social {
   margin: 0;
   padding: 0;
   margin-left: auto;
   list-style: none;
-  min-width: 20%;
+  min-width: 14%;
 }
 .social__item:not(:last-child) {
   margin-right: 33px;
