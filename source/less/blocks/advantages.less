@@ -1,9 +1,9 @@
-.advantage {
+.advantages {
   padding: 110px 103px 118px;
   background: #e3ecf6;
 }
 
-.advantage__title {
+.advantages__title {
   .clear();
   margin-bottom: 48px;
   font-weight: 600;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.advantage__list {
+.advantages__list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   list-style: none;
 }
 
-.advantage__item {
+.advantages__item {
   position: relative;
   width: 31%;
   padding: 82px 30px 26px;
@@ -36,26 +36,26 @@
   &--ship::before {
     top: 30px;
     .size(27; 32);
-    background-image: url("../img/advantage-ship.svg");
+    background-image: url("../img/advantages-ship.svg");
     background-size: 27px 32px;
   }
 
   &--include::before {
     top: 35px;
     .size(38; 21);
-    background-image: url("../img/advantage-include.svg");
+    background-image: url("../img/advantages-include.svg");
     background-size: 38px 21px;
   }
 
   &--zodiac::before {
     top: 38px;
     .size(42; 15);
-    background-image: url("../img/advantage-zodiac.svg");
+    background-image: url("../img/advantages-zodiac.svg");
     background-size: 42px 15px;
   }
 }
 
-.advantage__name {
+.advantages__name {
   .clear();
   margin-bottom: 8px;
   font-weight: 500;
@@ -64,7 +64,7 @@
   text-align: left;
 }
 
-.advantage__content {
+.advantages__content {
   .clear();
   font-weight: normal;
   font-size: 14px;
@@ -72,17 +72,17 @@
 }
 
 @media (max-width: @tablet-width) {
-  .advantage {
-    padding: 90px 45px;
+  .advantages {
+    padding: 90px 45px 98px;
   }
 
-  .advantage__title {
+  .advantages__title {
     margin-bottom: 48px;
     font-size: 26px;
     line-height: 39px;
   }
 
-  .advantage__item {
+  .advantages__item {
     width: 30.38%;
     padding: 72px 18px 22px;
     background-color: @menu;
@@ -97,49 +97,49 @@
     &--ship::before {
       top: 25px;
       .size(21; 26);
-      background-image: url("../img/advantage-ship.svg");
+      background-image: url("../img/advantages-ship.svg");
       background-size: 21px 26px;
     }
 
     &--include::before {
       top: 29px;
       .size(33; 19);
-      background-image: url("../img/advantage-include.svg");
+      background-image: url("../img/advantages-include.svg");
       background-size: 33px 19px;
     }
 
     &--zodiac::before {
       top: 32px;
       .size(38; 13);
-      background-image: url("../img/advantage-zodiac.svg");
+      background-image: url("../img/advantages-zodiac.svg");
       background-size: 38px 13px;
     }
   }
 
-  .advantage__name {
+  .advantages__name {
     line-height: 25px;
   }
 }
 
 @media (max-width: @mobile-width) {
-  .advantage {
-    padding: 56px 15px;
+  .advantages {
+    padding: 56px 15px 65px;
   }
 
-  .advantage__title {
+  .advantages__title {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
 
-  .advantage__list {
+  .advantages__list {
     flex-direction: column;
     justify-content: space-between;
     .clear();
     list-style: none;
   }
 
-  .advantage__item {
+  .advantages__item {
     width: 100%;
     padding: 71px 20px 20px;
     background-color: @menu;
@@ -158,25 +158,25 @@
     &--ship::before {
       top: 25px;
       .size(21; 26);
-      background-image: url("../img/advantage-ship.svg");
+      background-image: url("../img/advantages-ship.svg");
       background-size: 21px 26px;
     }
 
     &--include::before {
       top: 29px;
       .size(33; 19);
-      background-image: url("../img/advantage-include.svg");
+      background-image: url("../img/advantages-include.svg");
       background-size: 33px 19px;
     }
 
     &--zodiac::before {
       top: 32px;
       .size(38; 13);
-      background-image: url("../img/advantage-zodiac.svg");
+      background-image: url("../img/advantages-zodiac.svg");
       background-size: 38px 13px;
     }
 
-    .advantage__name {
+    .advantages__name {
       width: 70%;
       margin-bottom: 8px;
     }
