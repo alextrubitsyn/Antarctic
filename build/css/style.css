@@ -97,6 +97,30 @@ input[type="file"].visually-hidden {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  background-color: blue;
+  background-image: url("../img/antarctic_desktop.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 650px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  background-image: url("../img/antarctic_desktop@2x.png");
+}
+@media (max-width: 1023px) {
+  .page {
+    background-image: url("../img/antarctic_tablet.png");
+    background-size: 100% 638px;
+  }
+}
+@media (max-width: 767px) {
+  .page {
+    background-image: url("../img/antarctic_mobile.png");
+    background-size: contain;
+    background-size: 100% 500px;
+  }
+  .page--nojs {
+    background-image: none;
+  }
 }
 .page-header {
   display: -webkit-box;
@@ -109,7 +133,6 @@ input[type="file"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 194px;
   padding: 35px 7.54% 0;
 }
 .page-header__logo {
@@ -124,13 +147,11 @@ input[type="file"].visually-hidden {
 }
 @media (max-width: 1023px) {
   .page-header {
-    margin-bottom: 214px;
     padding: 30px 45px 0;
   }
 }
 @media (max-width: 767px) {
   .page-header {
-    margin-bottom: 130px;
     position: relative;
     padding: 20px 15px 0;
   }
@@ -292,7 +313,7 @@ input[type="file"].visually-hidden {
 }
 .page-label {
   color: #F9FBFD;
-  padding-left: 14.5%;
+  padding: 194px 0 277px 14.5%;
 }
 .page-label__image {
   z-index: -1;
@@ -318,14 +339,13 @@ input[type="file"].visually-hidden {
   z-index: 10;
   margin: 0;
   padding: 0;
-  margin-bottom: 277px;
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
 }
 @media (max-width: 1023px) {
   .page-label {
-    padding-left: 5.86%;
+    padding: 214px 0 276px 5.86%;
   }
   .page-label__image {
     height: 638px;
@@ -336,14 +356,20 @@ input[type="file"].visually-hidden {
     line-height: 61px;
   }
   .page-label__slogan {
-    margin-bottom: 276px;
     font-size: 18px;
     line-height: 22px;
   }
 }
 @media (max-width: 767px) {
   .page-label {
-    padding-left: 4.69%;
+    padding: 130px 0 178px 4.69%;
+  }
+  .page-label--nojs {
+    padding: 88px 0 178px 4.69%;
+    background-image: url("../img/antarctic_mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100% 500px;
   }
   .page-label__image {
     height: 500px;
@@ -354,7 +380,6 @@ input[type="file"].visually-hidden {
     line-height: 45px;
   }
   .page-label__slogan {
-    margin-bottom: 178px;
     font-size: 16px;
     line-height: 22px;
   }
