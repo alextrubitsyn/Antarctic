@@ -26,14 +26,19 @@
 }
 
 @media (max-width: @tablet-width) {
+  .main-nav {
+    &--footer {
+      padding-bottom: 6px;
+    }
+  }
+
   .main-nav__item:not(:last-child) {
     margin-right: 23px;
   }
 
   .main-nav__link {
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.08px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 
@@ -49,19 +54,19 @@
     &--footer {
       display: flex;
       .clear();
-      margin-bottom: 30px;
+      margin-bottom: 26px;
       background-color: inherit;
     }
   }
 
   .main-nav__item {
     &:not(:last-child) {
-      margin-left: 0;
+      margin-right: 0;
       margin-bottom: 30px;
     }
 
     &--footer:not(:last-child) {
-      margin-bottom: 23px;
+      margin-bottom: 13px;
     }
   }
 

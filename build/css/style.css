@@ -257,13 +257,15 @@ input[type="file"].visually-hidden {
   opacity: 0.5;
 }
 @media (max-width: 1023px) {
+  .main-nav--footer {
+    padding-bottom: 6px;
+  }
   .main-nav__item:not(:last-child) {
     margin-right: 23px;
   }
   .main-nav__link {
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.08px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -284,15 +286,15 @@ input[type="file"].visually-hidden {
     display: flex;
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
     background-color: inherit;
   }
   .main-nav__item:not(:last-child) {
-    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 30px;
   }
   .main-nav__item--footer:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 13px;
   }
   .main-nav__link {
     font-size: 18px;
@@ -1036,7 +1038,7 @@ input[type="file"].visually-hidden {
 }
 @media (max-width: 767px) {
   .early-booking {
-    min-height: 805px;
+    min-height: 760px;
     padding-top: 60px;
     background-image: url("../img/antarctic-booking_mobile.png");
   }
@@ -1110,6 +1112,147 @@ input[type="file"].visually-hidden {
     background-image: url("../img/antarctic-booking_mobile@2x.png");
   }
 }
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 120px 103px;
+  color: #011C40;
+  background-color: #F9FBFD;
+}
+.contacts__map {
+  width: 560px;
+  height: 306px;
+  margin-right: 100px;
+}
+.contacts__image {
+  width: 560px;
+  height: 306px;
+  background-color: #d8e4cd;
+}
+.contacts__wrapper {
+  width: calc(100% - 660px);
+}
+.contacts__invitation {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+.contacts__address {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  padding-left: 28px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+.contacts__address::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 22px;
+  background-image: url("../img/point.svg");
+}
+.contacts__phone {
+  position: relative;
+  padding-left: 28px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #011C40;
+}
+.contacts__phone::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/phone.svg");
+}
+.contacts__phone:hover,
+.contacts__phone:focus {
+  opacity: 0.3;
+}
+@media (max-width: 1023px) {
+  .contacts {
+    padding: 100px 45px;
+  }
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+    margin-right: 30px;
+  }
+  .contacts__image {
+    width: 324px;
+    height: 335px;
+  }
+  .contacts__wrapper {
+    width: calc(100% - 354px);
+  }
+  .contacts__invitation {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 26px;
+  }
+  .contacts__address {
+    margin-bottom: 25px;
+  }
+  .contacts__address::before {
+    top: 6px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 58px 15px 65px;
+  }
+  .contacts__map {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 290px;
+    height: 316px;
+    margin-right: 0;
+  }
+  .contacts__image {
+    width: 290px;
+    height: 316px;
+  }
+  .contacts__wrapper {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  .contacts__invitation {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 28px;
+  }
+  .contacts__address {
+    margin-bottom: 20px;
+  }
+  .contacts__address::before {
+    top: 6px;
+  }
+}
 .page-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1171,7 +1314,7 @@ input[type="file"].visually-hidden {
   .page-footer__logo {
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #F9FBFD;
   }
   .page-footer__social {

@@ -1,0 +1,138 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 120px 103px;
+  color: @text;
+  background-color: @menu;
+}
+
+.contacts__map {
+  .size(560; 306);
+  margin-right: 100px;
+}
+
+.contacts__image {
+  .size(560; 306);
+  background-color: #d8e4cd;
+}
+
+.contacts__wrapper {
+  width: calc(100% - 660px);
+}
+
+.contacts__invitation {
+  .clear();
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__address {
+  position: relative;
+  .clear();
+  margin-bottom: 25px;
+  padding-left: 28px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  &::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    .size(18; 22);
+    background-image: url("../img/point.svg");
+  }
+}
+
+.contacts__phone {
+  position: relative;
+  padding-left: 28px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: @text;
+
+  &::before {
+    .pseudo();
+    top: 0;
+    left: 0;
+    .size(18; 18);
+    background-image: url("../img/phone.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .contacts {
+    padding: 100px 45px;
+  }
+
+  .contacts__map {
+    .size(324; 335);
+    margin-right: 30px;
+  }
+
+  .contacts__image {
+    .size(324; 335);
+  }
+
+  .contacts__wrapper {
+    width: calc(100% - 354px);
+  }
+
+  .contacts__invitation {
+    .clear();
+    margin-bottom: 26px;
+  }
+
+  .contacts__address {
+    margin-bottom: 25px;
+
+    &::before {
+      top: 6px;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .contacts {
+    flex-direction: column;
+    padding: 58px 15px 65px;
+  }
+
+  .contacts__map {
+    order: 3;
+    .size(290; 316);
+    margin-right: 0;
+  }
+
+  .contacts__image {
+    .size(290; 316);
+  }
+
+  .contacts__wrapper {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .contacts__invitation {
+    .clear();
+    margin-bottom: 28px;
+  }
+
+  .contacts__address {
+    margin-bottom: 20px;
+
+    &::before {
+      top: 6px;
+    }
+  }
+}
