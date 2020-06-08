@@ -12,9 +12,9 @@
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <!-- <script>
-      document.createElement( "picture" );
-    </script> -->
+  <script>
+    document.createElement( "picture" );
+  </script>
 </head>
 
 <body>
@@ -320,6 +320,32 @@
           </li>
         </ul>
       </section>
+      <section class="early-booking">
+        <div class="early-booking__wrapper">
+          <h2 class="early-booking__title">Раннее бронирование</h2>
+          <p class="early-booking__proposal">
+            Забронируйте тур за&nbsp;3&nbsp;-6&nbsp;месяцев до даты выезда и сэкономьте до 50%
+          </p>
+        </div>
+        <form class="early-booking__form" action="https://echo.htmlacademy.ru" method="get">
+          <p class="early-booking__description">
+            Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в ближайшее время
+          </p>
+          <input type="text" class="early-booking__name" name="name" id="name" placeholder="Валерия" title="Введите e-mail для регистрации">
+          <label for="name" class="visually-hidden">Ваше имя</label>
+
+          <input type="tel" class="early-booking__phone" name="phone" id="phone" placeholder="89236889975" title="Введите e-mail для регистрации">
+          <label for="phone" class="visually-hidden">Ваш телефон</label>
+
+          <input type="email" class="early-booking__email" name="email" id="email" placeholder="grishaewa.lera@gmail.com" title="Введите e-mail для регистрации">
+          <label for="email" class="visually-hidden">Ваш e-mail</label>
+
+          <input type="checkbox" class="visually-hidden iearly-booking__consent" name="consent" id="consent" checked="">
+          <label for="consent" class="early-booking__consent-label">Я согласен на обработку моих персональных данных</label>
+
+          <button class="early-booking__btn" type="submit" name="button-entrance">Оставить заявку</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -380,6 +406,7 @@
       </ul>
     </footer>
   </div>
+  <!-- <script src="js/vendor.js" defer=""></script> -->
   <script src="js/script.js"></script>
 </body>
 

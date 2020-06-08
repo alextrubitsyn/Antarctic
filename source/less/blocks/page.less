@@ -6,7 +6,7 @@
   margin: 0 auto;
   flex-direction: column;
   min-height: 100vh;
-  background-color: blue;
+  background-color: #265c9e;
   background-image: url("../img/antarctic_desktop.png");
   background-repeat: no-repeat;
   background-position: center top;
@@ -14,7 +14,7 @@
 }
 
 @media (min-resolution: @retina-dpi),
-(min-resolution: @retina-dppx) {
+  (min-resolution: @retina-dppx) {
   background-image: url("../img/antarctic_desktop@2x.png");
 }
 
@@ -26,7 +26,7 @@
   }
 
   @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
     background-image: url("../img/antarctic_tablet@2x.png");
   }
 }
@@ -34,7 +34,6 @@
 @media (max-width: @mobile-width) {
   .page {
     background-image: url("../img/antarctic_mobile.png");
-    background-size: contain;
     background-size: 100% 500px;
 
     &--nojs {
@@ -43,7 +42,7 @@
   }
 
   @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
+    (min-resolution: @retina-dppx) {
     background-image: url("../img/antarctic_mobile@2x.png");
   }
 }
