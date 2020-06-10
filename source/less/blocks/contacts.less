@@ -1,10 +1,13 @@
 .contacts {
+  padding: 120px 0;
+  color: @text;
+  background-color: @menu;
+}
+
+.contacts__container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 120px 103px;
-  color: @text;
-  background-color: @menu;
 }
 
 .contacts__map {
@@ -18,7 +21,20 @@
 }
 
 .contacts__wrapper {
-  width: calc(100% - 660px);
+  min-height: 306px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 660px;
+  background-image: url("../img/map_desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 560px 306px;
+
+  @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+    background-image: url("../img/map_desktop@2x.jpg");
+  }
 }
 
 .contacts__invitation {
@@ -72,7 +88,7 @@
 
 @media (max-width: @tablet-width) {
   .contacts {
-    padding: 100px 45px;
+    padding: 100px 0;
   }
 
   .contacts__map {
@@ -85,7 +101,15 @@
   }
 
   .contacts__wrapper {
-    width: calc(100% - 354px);
+    min-height: 335px;
+    padding-left: 354px;
+    background-image: url("../img/map_tablet.jpg");
+    background-size: 324px 335px;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/map_tablet@2x.jpg");
+    }
   }
 
   .contacts__invitation {
@@ -94,7 +118,7 @@
   }
 
   .contacts__address {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     &::before {
       top: 6px;
@@ -104,8 +128,11 @@
 
 @media (max-width: @mobile-width) {
   .contacts {
+    padding: 58px 0 65px;
+  }
+
+  .contacts__container {
     flex-direction: column;
-    padding: 58px 15px 65px;
   }
 
   .contacts__map {
@@ -119,8 +146,17 @@
   }
 
   .contacts__wrapper {
-    width: 100%;
-    margin-bottom: 36px;
+    min-height: auto;
+    padding-left: 0;
+    padding-bottom: 352px;
+    background-image: url("../img/map_mobile.jpg");
+    background-size: 290px 316px;
+    background-position: center bottom;
+
+    @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+      background-image: url("../img/map_mobile@2x.jpg");
+    }
   }
 
   .contacts__invitation {

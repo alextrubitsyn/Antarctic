@@ -1,11 +1,14 @@
 .page-footer {
+  flex-shrink: 0;
+  // .clear();
+  padding: 50px 0;
+  background-color: @text;
+}
+
+.page-footer__container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-shrink: 0;
-  .clear();
-  padding: 50px 7.54%;
-  background-color: @text;
 }
 
 .page-footer__logo {
@@ -22,7 +25,7 @@
 
 @media (max-width: @tablet-width) {
   .page-footer {
-    padding: 50px 45px;
+    padding: 50px 0;
   }
 
   .page-footer__logo {
@@ -32,10 +35,13 @@
 
 @media (max-width: @mobile-width) {
   .page-footer {
+    padding: 40px 0;
+  }
+
+  .page-footer__container {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 40px 15px;
   }
 
   .page-footer__logo {

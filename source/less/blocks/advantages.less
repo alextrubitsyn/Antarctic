@@ -1,5 +1,5 @@
 .advantages {
-  padding: 110px 103px 118px;
+  padding: 110px 0 118px;
   background: #e3ecf6;
 }
 
@@ -55,7 +55,7 @@
   }
 }
 
-.advantages__name {
+.advantages h3 {
   .clear();
   margin-bottom: 8px;
   font-weight: 500;
@@ -64,7 +64,7 @@
   text-align: left;
 }
 
-.advantages__content {
+.advantages p {
   .clear();
   font-weight: normal;
   font-size: 14px;
@@ -73,7 +73,7 @@
 
 @media (max-width: @tablet-width) {
   .advantages {
-    padding: 90px 45px 98px;
+    padding: 90px 0 98px;
   }
 
   .advantages__title {
@@ -116,14 +116,14 @@
     }
   }
 
-  .advantages__name {
+  .advantages h3 {
     line-height: 25px;
   }
 }
 
 @media (max-width: @mobile-width) {
   .advantages {
-    padding: 56px 15px 65px;
+    padding: 56px 0 65px;
   }
 
   .advantages__title {
@@ -134,9 +134,6 @@
 
   .advantages__list {
     flex-direction: column;
-    justify-content: space-between;
-    .clear();
-    list-style: none;
   }
 
   .advantages__item {
@@ -175,10 +172,10 @@
       background-image: url("../img/advantages-zodiac.svg");
       background-size: 38px 13px;
     }
+  }
 
-    .advantages__name {
-      width: 70%;
-      margin-bottom: 8px;
-    }
+  .advantages__item h3 {
+    width: 70%;
+    margin-bottom: 8px;
   }
 }
