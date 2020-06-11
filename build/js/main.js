@@ -9,29 +9,7 @@
   var telInput = formBooking.querySelector('input[type="tel"]');
 
   var onInputChange = function (evt) {
-    var telValue = evt.target.value;
-    var matrix = '+7 (___) ___ ____';
-    var index = 0;
-    var def = matrix.replace(/\D/g, '');
-    var val = telValue.replace(/\D/g, '');
-
-    if (def.length >= val.length) {
-      val = def;
-    }
-
-    telValue = matrix.replace(/./g, function (a) {
-      var ret = '';
-      if (/[_\d]/.test(a) && index < telValue.length) {
-        ret = telValue.charAt(index++);
-      } else if (index >= telValue.length) {
-        ret = '';
-      } else {
-        ret = a;
-      }
-      // return /[_\d]/.test(a) && index < telValue.length ? telValue.charAt(index++) : index >= telValue.length ? '' : a;
-      return ret;
-    });
-
+    evt.target.value = evt.target.value.replace(/\D/g, '');
   };
 
   if (noJsHeader) {
@@ -45,7 +23,9 @@
   }
 
   if (telInput) {
-    telInput.addEventListener('input', onInputChange);
+    telInput.addEventListener('input', onInputChange, false);
+    telInput.addEventListener('focus', onInputChange, false);
+    telInput.addEventListener('blur', onInputChange, false);
   }
 
 })();
