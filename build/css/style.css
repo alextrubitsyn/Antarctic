@@ -114,7 +114,16 @@ input[type="file"].visually-hidden {
   min-height: 100vh;
 }
 .page-header {
-  background-color: #F9FBFD;
+  background-color: #004179;
+  background-image: url("../img/antarctic_desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-header {
+    background-image: url("../img/antarctic_desktop@2x.jpg");
+  }
 }
 .page-header__container {
   display: -webkit-box;
@@ -124,15 +133,6 @@ input[type="file"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("../img/antarctic_desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .page-header__container {
-    background-image: url("../img/antarctic_desktop@2x.jpg");
-  }
 }
 .page-header__wrapper {
   padding-top: 35px;
@@ -177,7 +177,7 @@ input[type="file"].visually-hidden {
   line-height: 24px;
 }
 @media (max-width: 1023px) {
-  .page-header__container {
+  .page-header {
     background-image: url("../img/antarctic_tablet.jpg");
   }
   .page-header__wrapper {
@@ -207,15 +207,13 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .page-header__container {
+  .page-header {
     background-image: url("../img/antarctic_tablet@2x.jpg");
   }
 }
 @media (max-width: 767px) {
   .page-header {
     position: relative;
-  }
-  .page-header .page-header__container {
     background-image: url("../img/antarctic_mobile.jpg");
   }
   .page-header--nojs {
@@ -296,7 +294,7 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .page-header .page-header__container {
+  .page-header {
     background-image: url("../img/antarctic_mobile@2x.jpg");
   }
 }
@@ -411,62 +409,6 @@ input[type="file"].visually-hidden {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-.page-label {
-  padding: 194px 0 277px;
-  color: #F9FBFD;
-}
-.page-label__title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 12px;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 66px;
-}
-.page-label__slogan {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-}
-@media (max-width: 1023px) {
-  .page-label {
-    padding: 214px 0 276px;
-  }
-  .page-label__title {
-    margin-bottom: 12px;
-    font-size: 50px;
-    line-height: 61px;
-  }
-  .page-label__slogan {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-@media (max-width: 767px) {
-  .page-label {
-    padding: 130px 0 178px;
-  }
-  .page-label--nojs {
-    padding: 88px 0 178px;
-    background-image: url("../img/antarctic_mobile.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 500px;
-  }
-  .page-label__image {
-    height: 500px;
-  }
-  .page-label__title {
-    margin-bottom: 12px;
-    font-size: 36px;
-    line-height: 45px;
-  }
-  .page-label__slogan {
-    font-size: 16px;
-    line-height: 22px;
-  }
 }
 .voyage {
   padding: 123px 0 117px;
@@ -796,7 +738,7 @@ input[type="file"].visually-hidden {
           justify-content: flex-start;
   position: relative;
   width: 260px;
-  height: 386px;
+  min-height: 386px;
   margin: 15px;
   padding: 70px 25px 34px;
   color: #F9FBFD;
@@ -936,22 +878,22 @@ input[type="file"].visually-hidden {
   }
 }
 .early-booking {
-  background-color: #b3dafa;
-}
-.early-booking__container {
-  min-height: 555px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: #011C40;
+  background-color: #004179;
   background-image: url("../img/antarctic-booking_desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .early-booking__container {
+  .early-booking {
     background-image: url("../img/antarctic-booking_desktop@2x.jpg");
   }
+}
+.early-booking__container {
+  min-height: 555px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #011C40;
 }
 .early-booking__wrapper {
   display: -webkit-box;
