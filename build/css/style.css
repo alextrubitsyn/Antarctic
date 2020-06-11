@@ -359,7 +359,7 @@ input[type="file"].visually-hidden {
     line-height: 15px;
   }
   .main-nav__item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 24px;
   }
   .main-nav__link {
     font-size: 14px;
@@ -1123,7 +1123,7 @@ input[type="file"].visually-hidden {
   .early-booking__form input {
     width: 100%;
     margin-bottom: 18px;
-    padding: 10px 16px;
+    padding: 13px 14px 7px;
   }
   .early-booking__form label {
     width: 180px;
