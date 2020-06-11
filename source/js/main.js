@@ -24,8 +24,6 @@
 
   if (telInput) {
     telInput.addEventListener('input', onInputChange, false);
-    telInput.addEventListener('focus', onInputChange, false);
-    telInput.addEventListener('blur', onInputChange, false);
   }
 
 })();
