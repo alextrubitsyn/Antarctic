@@ -149,6 +149,7 @@ input[type="file"].visually-hidden {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: none;
 }
 .page-header__label {
   padding: 194px 0 277px 95px;
