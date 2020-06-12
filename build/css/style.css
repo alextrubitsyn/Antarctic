@@ -817,7 +817,7 @@ input[type="file"].visually-hidden {
 }
 .cruises__item span {
   display: none;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
