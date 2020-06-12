@@ -5,23 +5,35 @@
 }
 
 .contacts__container {
+  position: relative;
   display: table;
-  min-height: 306px;
-  background-image: url("../img/map_desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: left 103px center;
-  background-size: 560px 306px;
+  height: 306px;
 
-  @media (min-resolution: @retina-dpi),
-  (min-resolution: @retina-dppx) {
-    background-image: url("../img/map_desktop@2x.jpg");
+  &::before {
+    .pseudo();
+    width: 41%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7.54%;
+    background-image: url("../img/map_desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 560px 306px;
+    overflow: hidden;
+
+    @media (min-resolution: @retina-dpi),
+    (min-resolution: @retina-dppx) {
+      background-image: url("../img/map_desktop@2x.jpg");
+    }
   }
 }
 
 .contacts__wrapper {
   display: table-cell;
   vertical-align: middle;
-  padding-left: 660px;
+  width: 43.1%;
+  min-width: 200px;
 }
 
 .contacts__invitation {
@@ -80,19 +92,23 @@
   }
 
   .contacts__container {
-    min-height: 335px;
-    background-image: url("../img/map_tablet.jpg");
-    background-position: left 45px center;
-    background-size: 324px 335px;
+    height: 335px;
 
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-      background-image: url("../img/map_tablet@2x.jpg");
+    &::before {
+      width: 42.2%;
+      left: 45px;
+      background-image: url("../img/map_tablet.jpg");
+      background-size: 324px 335px;
+
+      @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+        background-image: url("../img/map_tablet@2x.jpg");
+      }
     }
   }
 
   .contacts__wrapper {
-    padding-left: 354px;
+    width: 48%;
   }
 
   .contacts__invitation {
@@ -117,18 +133,27 @@
   .contacts__container {
     min-height: auto;
     padding-bottom: 352px;
-    background-image: url("../img/map_mobile.jpg");
-    background-size: 290px 316px;
-    background-position: center bottom;
 
-    @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
-      background-image: url("../img/map_mobile@2x.jpg");
+    &::before {
+      width: 100%;
+      bottom: 0;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/map_mobile.jpg");
+      background-size: 290px 316px;
+      background-position: center bottom;
+
+      @media (min-resolution: @retina-dpi),
+      (min-resolution: @retina-dppx) {
+        background-image: url("../img/map_mobile@2x.jpg");
+      }
     }
   }
 
   .contacts__wrapper {
     padding-left: 0;
+    width: 100%;
   }
 
   .contacts__invitation {

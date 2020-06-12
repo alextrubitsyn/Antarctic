@@ -175,7 +175,7 @@ input[type="file"].visually-hidden {
     background-image: url("../img/antarctic_tablet.jpg");
   }
   .page-header__wrapper {
-    padding-top: 30px;
+    padding-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -188,7 +188,7 @@ input[type="file"].visually-hidden {
             align-items: center;
   }
   .page-header__label {
-    padding: 214px 0 276px;
+    padding: 204px 0 276px;
   }
   .page-header__label-title {
     margin-bottom: 12px;
@@ -209,6 +209,7 @@ input[type="file"].visually-hidden {
   .page-header {
     position: relative;
     background-image: url("../img/antarctic_mobile.jpg");
+    background-position: center;
   }
   .page-header--nojs {
     padding: 0;
@@ -321,12 +322,22 @@ input[type="file"].visually-hidden {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   max-width: 80%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+.main-nav--footer {
+  margin-right: auto;
+}
+.main-nav__item {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .main-nav__item:not(:last-child) {
+  margin-right: 6.7%;
   margin-right: 33px;
 }
 .main-nav__link {
@@ -378,8 +389,11 @@ input[type="file"].visually-hidden {
     display: flex;
     margin: 0;
     padding: 0;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
     background-color: inherit;
+  }
+  .main-nav__item {
+    margin-top: 0;
   }
   .main-nav__item:not(:last-child) {
     margin-right: 0;
@@ -410,15 +424,27 @@ input[type="file"].visually-hidden {
   background-color: #F9FBFD;
 }
 .voyage__container {
+  position: relative;
   display: table;
-  min-height: 301px;
+  height: 301px;
+}
+.voyage__container::after {
+  position: absolute;
+  content: "";
+  width: 41%;
+  max-width: 560px;
+  height: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 7.54%;
   background-image: url("../img/penguins_desktop.jpg");
   background-repeat: no-repeat;
-  background-position: right 103px center;
+  background-position: center;
   background-size: 560px 301px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .voyage__container {
+  .voyage__container::after {
     background-image: url("../img/penguins_desktop@2x.jpg");
   }
 }
@@ -449,9 +475,13 @@ input[type="file"].visually-hidden {
     padding: 89px 0 93px;
   }
   .voyage__container {
-    min-height: 264px;
+    height: 264px;
+  }
+  .voyage__container::after {
+    width: 42.2%;
+    height: 264px;
+    right: 45px;
     background-image: url("../img/penguins_tablet.jpg");
-    background-position: right 45px center;
     background-size: 324px 264px;
   }
   .voyage__wrapper h2 {
@@ -466,7 +496,7 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .voyage__container {
+  .voyage__container::after {
     background-image: url("../img/penguins_tablet@2x.jpg");
   }
 }
@@ -481,8 +511,16 @@ input[type="file"].visually-hidden {
   .voyage__container {
     min-height: auto;
     padding-bottom: 220px;
+  }
+  .voyage__container::after {
+    width: 100%;
+    height: 186px;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     background-image: url("../img/penguins_mobile.jpg");
-    background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 290px 186px;
   }
@@ -497,7 +535,7 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .voyage__container {
+  .voyage__container::after {
     background-image: url("../img/penguins_mobile@2x.jpg");
   }
 }
@@ -985,6 +1023,7 @@ input[type="file"].visually-hidden {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
+  border-radius: 0;
 }
 .early-booking__form input:hover {
   opacity: 0.7;
@@ -1164,22 +1203,35 @@ input[type="file"].visually-hidden {
   background-color: #F9FBFD;
 }
 .contacts__container {
+  position: relative;
   display: table;
-  min-height: 306px;
+  height: 306px;
+}
+.contacts__container::before {
+  position: absolute;
+  content: "";
+  width: 41%;
+  height: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 7.54%;
   background-image: url("../img/map_desktop.jpg");
   background-repeat: no-repeat;
-  background-position: left 103px center;
+  background-position: center;
   background-size: 560px 306px;
+  overflow: hidden;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .contacts__container {
+  .contacts__container::before {
     background-image: url("../img/map_desktop@2x.jpg");
   }
 }
 .contacts__wrapper {
   display: table-cell;
   vertical-align: middle;
-  padding-left: 660px;
+  width: 43.1%;
+  min-width: 200px;
 }
 .contacts__invitation {
   margin: 0;
@@ -1236,13 +1288,16 @@ input[type="file"].visually-hidden {
     padding: 100px 0;
   }
   .contacts__container {
-    min-height: 335px;
+    height: 335px;
+  }
+  .contacts__container::before {
+    width: 42.2%;
+    left: 45px;
     background-image: url("../img/map_tablet.jpg");
-    background-position: left 45px center;
     background-size: 324px 335px;
   }
   .contacts__wrapper {
-    padding-left: 354px;
+    width: 48%;
   }
   .contacts__invitation {
     margin: 0;
@@ -1257,7 +1312,7 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .contacts__container {
+  .contacts__container::before {
     background-image: url("../img/map_tablet@2x.jpg");
   }
 }
@@ -1268,12 +1323,21 @@ input[type="file"].visually-hidden {
   .contacts__container {
     min-height: auto;
     padding-bottom: 352px;
+  }
+  .contacts__container::before {
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     background-image: url("../img/map_mobile.jpg");
     background-size: 290px 316px;
     background-position: center bottom;
   }
   .contacts__wrapper {
     padding-left: 0;
+    width: 100%;
   }
   .contacts__invitation {
     margin: 0;
@@ -1288,7 +1352,7 @@ input[type="file"].visually-hidden {
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .contacts__container {
+  .contacts__container::before {
     background-image: url("../img/map_mobile@2x.jpg");
   }
 }
@@ -1313,6 +1377,8 @@ input[type="file"].visually-hidden {
 .page-footer__logo {
   margin-right: 40px;
   color: #F9FBFD;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 .page-footer__social {
   display: -webkit-box;
@@ -1327,10 +1393,12 @@ input[type="file"].visually-hidden {
           justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (max-width: 1023px) {
   .page-footer {
-    padding: 50px 0;
+    padding: 38px 0;
   }
   .page-footer__logo {
     margin-right: 25px;
@@ -1367,7 +1435,7 @@ input[type="file"].visually-hidden {
 .social {
   margin: 0;
   padding: 0;
-  margin-left: auto;
+  margin-left: 20px;
   list-style: none;
   min-width: 14%;
 }

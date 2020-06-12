@@ -9,7 +9,13 @@
   var telInput = formBooking.querySelector('input[type="tel"]');
 
   var onInputChange = function (evt) {
-    evt.target.value = evt.target.value.replace(/\D/g, '');
+    var val = evt.target.value;
+    var newval = val.replace(/\D/g, '').substr(0, 10);
+    if (val[0] === '+') {
+      evt.target.value = '+' + newval;
+    } else {
+      evt.target.value = newval;
+    }
   };
 
   if (noJsHeader) {
