@@ -746,6 +746,10 @@ input[type="file"].visually-hidden {
 .cruises__item:hover img {
   display: none;
 }
+.cruises__item:hover p,
+.cruises__item:hover span {
+  display: block;
+}
 .cruises__item:hover h3 {
   top: 30px;
   left: 25px;
@@ -772,6 +776,7 @@ input[type="file"].visually-hidden {
   background: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
 }
 .cruises__item p {
+  display: none;
   margin: 0;
   padding: 0;
   font-weight: 500;
@@ -779,12 +784,16 @@ input[type="file"].visually-hidden {
   line-height: 20px;
 }
 .cruises__item span {
+  display: none;
   margin-bottom: 12px;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
 .cruises__item a {
+  -webkit-box-ordinal-group: 101;
+      -ms-flex-order: 100;
+          order: 100;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -805,13 +814,17 @@ input[type="file"].visually-hidden {
 .cruises__item a:focus {
   opacity: 0.5;
 }
-.cruises__item a:focus ~ img {
+.cruises__item a:focus ~ picture img {
   display: none;
 }
 .cruises__item a:focus ~ h3 {
   top: 30px;
   left: 25px;
   bottom: auto;
+}
+.cruises__item a:focus ~ p,
+.cruises__item a:focus ~ span {
+  display: block;
 }
 @media (max-width: 1023px) {
   .cruises {
