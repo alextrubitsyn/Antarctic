@@ -4,21 +4,25 @@
   background-color: @menu;
 }
 
-.voyage__wrapper {
+.voyage__container {
+  outline: 1px solid red;
+  display: table;
   min-height: 301px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
   background-image: url("../img/penguins_desktop.jpg");
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 48% auto;
+  background-position: right 103px center;
+  // background-size: 48% auto;
+  background-size: 560px 301px;
 
   @media (min-resolution: @retina-dpi),
     (min-resolution: @retina-dppx) {
-    background-image: url("../img/penguins_desktop@2x.jpg");
+      background-image: url("../img/penguins_desktop@2x.jpg");
   }
+}
+
+.voyage__wrapper {
+  display: table-cell;
+  vertical-align: middle
 }
 
 .voyage__wrapper h2 {
@@ -44,7 +48,7 @@
     padding: 89px 0 93px;
   }
 
-  .voyage__wrapper {
+  .voyage__container {
     min-height: 264px;
     background-image: url("../img/penguins_tablet.jpg");
     background-size: 48% auto;
@@ -74,7 +78,7 @@
     padding: 57px 0 65px;
   }
 
-  .voyage__wrapper {
+  .voyage__container {
     min-height: auto;
     padding-bottom: 220px;
     background-image: url("../img/penguins_mobile.jpg");
