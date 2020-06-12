@@ -766,10 +766,9 @@ input[type="file"].visually-hidden {
           justify-content: flex-start;
   position: relative;
   width: 260px;
-  height: 386px;
+  min-height: 386px;
   margin: 15px;
   padding: 70px 25px 34px;
-  overflow: auto;
   color: #F9FBFD;
   background-color: #011C40;
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
