@@ -10,6 +10,6 @@ package-lock.json
 node_modules/
 npm-debug.*
 source/css/*.css
-source/sass/*.scss
+source/sass/**/*.scss
 source/css/*.map
 Thumbs.db
