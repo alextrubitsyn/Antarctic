@@ -1,7 +1,7 @@
 .voyage {
   padding: 123px 0 117px;
-  color: @text;
-  background-color: @menu;
+  color: $text;
+  background-color: $menu;
 }
 
 .voyage__container {
@@ -10,7 +10,7 @@
   height: 301px;
 
   &::after {
-    .pseudo();
+    @extend %pseudo;
     width: 41%;
     max-width: 560px;
     height: 100%;
@@ -22,8 +22,8 @@
     background-position: center;
     background-size: 560px 301px;
 
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/penguins_desktop@2x.jpg");
     }
   }
@@ -35,7 +35,7 @@
 }
 
 .voyage__wrapper h2 {
-  .clear();
+  @extend %clear;
   width: 38%;
   margin-bottom: 25px;
   font-weight: 600;
@@ -45,14 +45,14 @@
 
 .voyage__wrapper p {
   width: 46%;
-  .clear();
+  @extend %clear;
   padding-bottom: 8px;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: $tablet-width) {
   .voyage {
     padding: 89px 0 93px;
   }
@@ -67,8 +67,8 @@
       background-image: url("../img/penguins_tablet.jpg");
       background-size: 324px 264px;
 
-      @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/penguins_tablet@2x.jpg");
       }
     }
@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: $mobile-width) {
   .voyage {
     flex-direction: column;
     padding: 57px 0 65px;
@@ -108,8 +108,8 @@
       background-position: center bottom;
       background-size: 290px 186px;
 
-      @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/penguins_mobile@2x.jpg");
       }
     }

@@ -1,7 +1,7 @@
 .contacts {
   padding: 120px 0;
-  color: @text;
-  background-color: @menu;
+  color: $text;
+  background-color: $menu;
 }
 
 .contacts__container {
@@ -10,7 +10,7 @@
   height: 306px;
 
   &::before {
-    .pseudo();
+    @extend %pseudo;
     width: 41%;
     height: 100%;
     top: 50%;
@@ -22,8 +22,8 @@
     background-size: 560px 306px;
     overflow: hidden;
 
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/map_desktop@2x.jpg");
     }
   }
@@ -37,7 +37,7 @@
 }
 
 .contacts__invitation {
-  .clear();
+  @extend %clear;
   margin-bottom: 32px;
   font-weight: 500;
   font-size: 18px;
@@ -46,7 +46,7 @@
 
 .contacts__address {
   position: relative;
-  .clear();
+  @extend %clear;
   margin-bottom: 25px;
   padding-left: 28px;
   font-weight: normal;
@@ -54,10 +54,10 @@
   line-height: 24px;
 
   &::before {
-    .pseudo();
+    @extend %pseudo;
     top: 0;
     left: 0;
-    .size(18; 22);
+    @include size(18px, 22px);
     background-image: url("../img/point.svg");
   }
 }
@@ -70,13 +70,13 @@
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
-  color: @text;
+  color: $text;
 
   &::before {
-    .pseudo();
+    @extend %pseudo;
     top: 0;
     left: 0;
-    .size(18; 18);
+    @include size(18px, 18px);
     background-image: url("../img/phone.svg");
   }
 
@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: $tablet-width) {
   .contacts {
     padding: 100px 0;
   }
@@ -100,8 +100,8 @@
       background-image: url("../img/map_tablet.jpg");
       background-size: 324px 335px;
 
-      @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/map_tablet@2x.jpg");
       }
     }
@@ -112,7 +112,7 @@
   }
 
   .contacts__invitation {
-    .clear();
+    @extend %clear;
     margin-bottom: 26px;
   }
 
@@ -125,7 +125,7 @@
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: $mobile-width) {
   .contacts {
     padding: 58px 0 65px;
   }
@@ -144,8 +144,8 @@
       background-size: 290px 316px;
       background-position: center bottom;
 
-      @media (min-resolution: @retina-dpi),
-        (min-resolution: @retina-dppx) {
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
         background-image: url("../img/map_mobile@2x.jpg");
       }
     }
@@ -157,7 +157,7 @@
   }
 
   .contacts__invitation {
-    .clear();
+    @extend %clear;
     margin-bottom: 28px;
   }
 

@@ -5,8 +5,8 @@
   background-size: cover;
   background-position: center bottom;
 
-  @media (min-resolution: @retina-dpi),
-    (min-resolution: @retina-dppx) {
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     background-image: url("../img/antarctic-booking_desktop@2x.jpg");
   }
 }
@@ -15,7 +15,7 @@
   min-height: 555px;
   padding-top: 50px;
   padding-bottom: 50px;
-  color: @text;
+  color: $text;
 }
 
 .early-booking__wrapper {
@@ -36,7 +36,7 @@
 }
 
 .early-booking h2 {
-  .clear();
+  @extend %clear;
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 40px;
@@ -45,7 +45,7 @@
 
 .early-booking p {
   width: 360px;
-  .clear();
+  @extend %clear;
   font-weight: normal;
   font-size: 18px;
   line-height: 27px;
@@ -56,15 +56,15 @@
   display: flex;
   flex-direction: column;
   width: 403px;
-  .clear();
+  @extend %clear;
   margin-left: 20px;
   padding: 45px 50px 50px;
-  color: @menu;
-  background-color: @text;
+  color: $menu;
+  background-color: $text;
 }
 
 .early-booking__form b {
-  .clear();
+  @extend %clear;
   margin-bottom: 25px;
   font-weight: 500;
   font-size: 18px;
@@ -73,7 +73,7 @@
 
 .early-booking__form input {
   width: 100%;
-  .clear();
+  @extend %clear;
   margin-bottom: 18px;
   padding: 11px 15px 9px;
   font-family: inherit;
@@ -92,7 +92,7 @@
   }
 }
 
-.early-booking__form input[type="checkbox"]:checked ~ label {
+.early-booking__form input[type="checkbox"]:checked~label {
   &::before {
     background-image: url("../img/checked.svg");
     background-repeat: no-repeat;
@@ -110,11 +110,11 @@
   line-height: 13px;
 
   &::before {
-    .pseudo();
-    .size(18);
+    @extend %pseudo;
+    @include size(18px);
     top: 0;
     left: 0;
-    background-color: @menu;
+    background-color: $menu;
   }
 
   &:hover {
@@ -123,13 +123,9 @@
   }
 }
 
-.early-booking__form input[type="checkbox"]:focus ~ label {
+.early-booking__form input[type="checkbox"]:focus~label {
   opacity: 0.7;
   color: #bbdafa;
-}
-
-.early-booking__form input[type="checkbox"] {
-  position: static;
 }
 
 .early-booking__form button {
@@ -138,8 +134,8 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  color: @text;
-  background-color: @menu;
+  color: $text;
+  background-color: $menu;
   border: none;
 
   &:hover,
@@ -149,12 +145,12 @@
   }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: $tablet-width) {
   .early-booking {
     background-image: url("../img/antarctic-booking_tablet.jpg");
 
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/antarctic-booking_tablet@2x.jpg");
     }
   }
@@ -192,12 +188,12 @@
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: $mobile-width) {
   .early-booking {
     background-image: url("../img/antarctic-booking_mobile.jpg");
 
-    @media (min-resolution: @retina-dpi),
-      (min-resolution: @retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/antarctic-booking_mobile@2x.jpg");
     }
   }
@@ -232,8 +228,8 @@
     align-items: center;
     width: 290px;
     padding: 35px 30px 40px;
-    color: @menu;
-    background-color: @text;
+    color: $menu;
+    background-color: $text;
   }
 
   .early-booking__form b {
@@ -260,7 +256,7 @@
     line-height: 13px;
 
     &::before {
-      .size(20);
+      @include size(20px);
       top: 0;
       left: 0;
     }

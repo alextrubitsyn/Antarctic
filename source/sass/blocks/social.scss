@@ -1,8 +1,9 @@
 .social {
-  .clear();
-  margin-left: 10px;
+  @extend %clear;
+  margin-left: 20px;
   list-style: none;
   min-width: 14%;
+
 }
 
 .social__item:not(:last-child) {
@@ -10,6 +11,7 @@
 }
 
 .social__link {
+
   &:hover,
   &:focus {
     cursor: pointer;
@@ -18,45 +20,45 @@
 }
 
 .social__link-image {
-  color: @menu;
+  color: $menu;
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: $tablet-width) {
   .social__item:not(:last-child) {
     margin-right: 23px;
   }
 
   .social__link-image {
     &--facebook {
-      .size(9; 16);
+      @include size(9px, 16px);
     }
 
     &--instagram {
-      .size(16; 16);
+      @include size(16px);
     }
 
     &--twitter {
-      .size(16; 13);
+      @include size(16px, 13px);
     }
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: $mobile-width) {
   .social {
-    .clear();
+    @extend %clear;
   }
 
   .social__link-image {
     &--facebook {
-      .size(9; 16);
+      @include size(9px, 16px);
     }
 
     &--instagram {
-      .size(16; 16);
+      @include size(16px);
     }
 
     &--twitter {
-      .size(16; 13);
+      @include size(16px, 13px);
     }
   }
 }

@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   flex-shrink: 0;
   max-width: 80%;
-  .clear();
+  @extend %clear;
   list-style: none;
 
   &--footer {
@@ -18,11 +18,13 @@
 }
 
 .main-nav__item:not(:last-child) {
+  // margin-right: 2.84%;
+  margin-right: 6.7%;
   margin-right: 33px;
 }
 
 .main-nav__link {
-  color: @menu;
+  color: $menu;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -35,7 +37,7 @@
   }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: $tablet-width) {
   .main-nav {
     padding-bottom: 5px;
 
@@ -59,18 +61,18 @@
   }
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: $mobile-width) {
   .main-nav {
     display: none;
     flex-direction: column;
     padding: 88px 15px 65px;
-    color: @text;
-    background-color: @menu;
+    color: $text;
+    background-color: $menu;
     max-width: 100%;
 
     &--footer {
       display: flex;
-      .clear();
+      @extend %clear;
       margin-bottom: 16px;
       background-color: inherit;
     }
@@ -78,7 +80,9 @@
 
   .main-nav__item {
     margin-top: 0;
+  }
 
+  .main-nav__item {
     &:not(:last-child) {
       margin-right: 0;
       margin-bottom: 21px;
@@ -92,12 +96,12 @@
   .main-nav__link {
     font-size: 18px;
     line-height: 22px;
-    color: @text;
+    color: $text;
 
     &--footer {
       font-size: 12px;
       line-height: 15px;
-      color: @menu;
+      color: $menu;
     }
   }
 }
