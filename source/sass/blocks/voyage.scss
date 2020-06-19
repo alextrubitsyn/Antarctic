@@ -1,0 +1,126 @@
+.voyage {
+  padding: 123px 0 117px;
+  color: $text;
+  background-color: $menu;
+}
+
+.voyage__container {
+  position: relative;
+  display: table;
+  height: 301px;
+
+  &::after {
+    @include pseudo-px(41%, 100%);
+    // width: 41%;
+    max-width: 560px;
+    // height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7.54%;
+    background-image: url("../img/penguins_desktop.jpg");
+    @include bg($size: 560px 301px);
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/penguins_desktop@2x.jpg");
+    }
+  }
+}
+
+.voyage__wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.voyage__wrapper h2 {
+  @include clear;
+  width: 38%;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.voyage__wrapper p {
+  width: 46%;
+  @include clear;
+  padding-bottom: 8px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: $tablet-width) {
+  .voyage {
+    padding: 89px 0 93px;
+  }
+
+  .voyage__container {
+    height: 264px;
+
+    &::after {
+      width: 42.2%;
+      height: 264px;
+      right: 45px;
+      background-image: url("../img/penguins_tablet.jpg");
+      background-size: 324px 264px;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/penguins_tablet@2x.jpg");
+      }
+    }
+  }
+
+  .voyage__wrapper h2 {
+    width: 38%;
+    margin-bottom: 18px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .voyage__wrapper p {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .voyage {
+    flex-direction: column;
+    padding: 57px 0 65px;
+  }
+
+  .voyage__container {
+    min-height: auto;
+    padding-bottom: 220px;
+
+    &::after {
+      width: 100%;
+      height: 186px;
+      bottom: 0;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/penguins_mobile.jpg");
+      background-position: center bottom;
+      background-size: 290px 186px;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/penguins_mobile@2x.jpg");
+      }
+    }
+  }
+
+  .voyage__wrapper h2 {
+    width: 70%;
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .voyage__wrapper p {
+    width: 99%;
+  }
+}

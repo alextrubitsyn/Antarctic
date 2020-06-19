@@ -1,0 +1,190 @@
+.page-header {
+  background-color: #004179;
+  background-image: url("../img/antarctic_desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    background-image: url("../img/antarctic_desktop@2x.jpg");
+  }
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__wrapper {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-header__logo {
+  margin-right: auto;
+  color: $menu;
+}
+
+.page-header__toggle {
+  display: none;
+  @include clear;
+  border: 0;
+  outline: none;
+}
+
+.page-header__label {
+  padding: 194px 0 277px 95px;
+  color: $menu;
+}
+
+.page-header__label-title {
+  @include clear;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 66px;
+}
+
+.page-header__label-slogan {
+  @include clear;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    background-image: url("../img/antarctic_tablet.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/antarctic_tablet@2x.jpg");
+    }
+  }
+
+  .page-header__wrapper {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .page-header__label {
+    padding: 204px 0 276px;
+  }
+
+  .page-header__label-title {
+    margin-bottom: 12px;
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .page-header__label-slogan {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header {
+    position: relative;
+    background-image: url("../img/antarctic_mobile.jpg");
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/antarctic_mobile@2x.jpg");
+    }
+
+    &--nojs {
+      padding: 0;
+    }
+
+    & .page-header__logo {
+      color: $menu;
+    }
+
+    &--nojs .page-header__logo {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+      color: $text;
+    }
+
+    &--menu-open .page-header__wrapper {
+      padding-top: 0;
+      align-items: flex-start;
+    }
+
+    &--menu-open .page-header__logo {
+      color: $text;
+    }
+
+    &--nojs .page-header__nav-list {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+
+    &--menu-open .page-header__nav-list {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    & .page-header__toggle {
+      display: block;
+      @include size(24, 14);
+      margin-bottom: 4px;
+      z-index: 10;
+      background-image: url("../img/menu.svg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 24px 14px;
+      background-color: inherit;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
+    }
+
+    &--nojs .page-header__toggle {
+      display: none;
+    }
+
+    &--menu-open .page-header__toggle {
+      display: block;
+      @include size(15);
+      margin-top: 4px;
+      background-image: url("../img/close.svg");
+      background-size: 15px 15px;
+      background-position: center center;
+    }
+
+    .page-header__label {
+      padding: 130px 0 178px;
+    }
+
+    .page-header__wrapper {
+      padding-top: 20px;
+    }
+
+    .page-header__label-title {
+      margin-bottom: 12px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    .page-header__label-slogan {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

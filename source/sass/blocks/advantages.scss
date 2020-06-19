@@ -1,0 +1,174 @@
+.advantages {
+  padding: 110px 0 118px;
+  background: #e3ecf6;
+
+  @include for-tablet {
+    padding: 90px 0 98px;
+  }
+
+  @include for-mobile {
+    padding: 56px 0 65px;
+  }
+}
+
+.advantages__title {
+  @include clear;
+  margin-bottom: 48px;
+  @include fonts(600, 28, 42);
+  text-align: center;
+
+  @include for-tablet {
+    margin-bottom: 48px;
+    @include fonts(600, 26, 39);
+  }
+
+  @include for-mobile {
+    margin-bottom: 30px;
+    @include fonts(600, 24, 36);
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include list;
+}
+
+.advantages__item {
+  position: relative;
+  width: 31%;
+  padding: 82px 30px 26px;
+  background-color: $menu;
+
+  &::before {
+    @include pseudo;
+    left: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--ship::before {
+    top: 30px;
+    @include size(27, 32);
+    background-image: url("../img/advantages-ship.svg");
+    background-size: 27px 32px;
+  }
+
+  &--include::before {
+    top: 35px;
+    @include size(38, 21);
+    background-image: url("../img/advantages-include.svg");
+    background-size: 38px 21px;
+  }
+
+  &--zodiac::before {
+    top: 38px;
+    @include size(42, 15);
+    background-image: url("../img/advantages-zodiac.svg");
+    background-size: 42px 15px;
+  }
+}
+
+.advantages h3 {
+  @include clear;
+  margin-bottom: 8px;
+  @include fonts(500, 18, 27);
+  text-align: left;
+}
+
+.advantages p {
+  @include clear;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@include for-tablet {
+  .advantages__item {
+    width: 30.38%;
+    padding: 72px 18px 22px;
+    background-color: $menu;
+
+    &::before {
+      @include pseudo;
+      left: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--ship::before {
+      top: 25px;
+      @include size(21, 26);
+      background-image: url("../img/advantages-ship.svg");
+      background-size: 21px 26px;
+    }
+
+    &--include::before {
+      top: 29px;
+      @include size(33, 19);
+      background-image: url("../img/advantages-include.svg");
+      background-size: 33px 19px;
+    }
+
+    &--zodiac::before {
+      top: 32px;
+      @include size(38, 13);
+      background-image: url("../img/advantages-zodiac.svg");
+      background-size: 38px 13px;
+    }
+  }
+
+  .advantages h3 {
+    line-height: 25px;
+  }
+}
+
+@include for-mobile {
+  .advantages__list {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    width: 100%;
+    padding: 71px 20px 20px;
+    background-color: $menu;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+
+    &::before {
+      @include pseudo;
+      left: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--ship::before {
+      top: 25px;
+      @include size(21, 26);
+      background-image: url("../img/advantages-ship.svg");
+      background-size: 21px 26px;
+    }
+
+    &--include::before {
+      top: 29px;
+      @include size(33, 19);
+      background-image: url("../img/advantages-include.svg");
+      background-size: 33px 19px;
+    }
+
+    &--zodiac::before {
+      top: 32px;
+      @include size(38, 13);
+      background-image: url("../img/advantages-zodiac.svg");
+      background-size: 38px 13px;
+    }
+  }
+
+  .advantages__item h3 {
+    width: 70%;
+    margin-bottom: 8px;
+  }
+}

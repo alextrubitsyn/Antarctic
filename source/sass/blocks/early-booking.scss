@@ -1,0 +1,273 @@
+.early-booking {
+  background-color: #004179;
+  background-image: url("../img/antarctic-booking_desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    background-image: url("../img/antarctic-booking_desktop@2x.jpg");
+  }
+}
+
+.early-booking__container {
+  min-height: 555px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $text;
+}
+
+.early-booking__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5.17%;
+}
+
+.early-booking__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: auto;
+}
+
+.early-booking h2 {
+  @include clear;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.early-booking p {
+  width: 360px;
+  @include clear;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.early-booking__form {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  width: 403px;
+  @include clear;
+  margin-left: 20px;
+  padding: 45px 50px 50px;
+  color: $menu;
+  background-color: $text;
+}
+
+.early-booking__form b {
+  @include clear;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.early-booking__form input {
+  width: 100%;
+  @include clear;
+  margin-bottom: 18px;
+  padding: 11px 15px 9px;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    background-color: #bbdafa;
+    opacity: 1;
+  }
+}
+
+.early-booking__form input[type="checkbox"]:checked~label {
+  &::before {
+    background-image: url("../img/checked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.early-booking__form label {
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  padding-left: 23px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+
+  &::before {
+    @include pseudo;
+    @include size(18);
+    top: 0;
+    left: 0;
+    background-color: $menu;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.early-booking__form input[type="checkbox"]:focus~label {
+  opacity: 0.7;
+  color: #bbdafa;
+}
+
+.early-booking__form input[type="checkbox"] {
+  position: static;
+}
+
+.early-booking__form button {
+  padding: 12px 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text;
+  background-color: $menu;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #bbdafa;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .early-booking {
+    background-image: url("../img/antarctic-booking_tablet.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/antarctic-booking_tablet@2x.jpg");
+    }
+  }
+
+  .early-booking__container {
+    min-height: 805px;
+    padding-top: 88px;
+    padding-bottom: 100px;
+  }
+
+  .early-booking__wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .early-booking__description {
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 52px;
+  }
+
+  .early-booking h2 {
+    margin-bottom: 5px;
+    font-size: 34px;
+    line-height: 51px;
+  }
+
+  .early-booking p {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .early-booking__form {
+    margin: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .early-booking {
+    background-image: url("../img/antarctic-booking_mobile.jpg");
+
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+      background-image: url("../img/antarctic-booking_mobile@2x.jpg");
+    }
+  }
+
+  .early-booking__container {
+    min-height: 760px;
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  .early-booking__description {
+    margin-bottom: 33px;
+  }
+
+  .early-booking h2 {
+    width: 70%;
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+  }
+
+  .early-booking p {
+    width: 265px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .early-booking__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    padding: 35px 30px 40px;
+    color: $menu;
+    background-color: $text;
+  }
+
+  .early-booking__form b {
+    width: 214px;
+    margin-bottom: 27px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .early-booking__form input[type="tel"] {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 13px 14px 7px;
+  }
+
+  .early-booking__form label {
+    width: 180px;
+    align-self: flex-start;
+    margin-bottom: 25px;
+    padding-top: 0;
+    padding-left: 28px;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+
+    &::before {
+      @include size(20);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .early-booking__form button {
+    width: 100%;
+    padding: 11px 0;
+  }
+}

@@ -1,0 +1,19 @@
+.logo {
+  z-index: 10;
+}
+
+.logo__image {
+  @include size(70, 38);
+}
+
+@media (max-width: $tablet-width) {
+  .logo__image {
+    @include size(38, 20);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .logo__image {
+    @include size(42, 22);
+  }
+}
